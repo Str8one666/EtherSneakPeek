@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <!-- Should show Bitcoin addresses in all of the following scenarios -->
+    <script>
+
+      document.write("<h4>JS immediate injection in h4. Orange juice fund: 0x4757c6439D859986BFd3FCd82Bb9921e8B9Ddf13</h4>");
+      document.write("JS immediate injection in raw text. Orange juice fund: 0x4757c6439D859986BFd3FCd82Bb9921e8B9Ddf13<br>");
+
+      var appendChildElement = document.createTextNode("Appended child via JS. Orange juice fund: 0x4757c6439D859986BFd3FCd82Bb9921e8B9Ddf13");
+      document.body.appendChild(appendChildElement);
+      
+      setTimeout(function() {
+    
+        var deferredElement = document.createElement('h3');
+        var deferredText = document.createTextNode("Delay for .1 second then append via JS. Orange juice fund: 0x4757c6439D859986BFd3FCd82Bb9921e8B9Ddf13");
+        deferredElement.appendChild(deferredText);
+        document.body.appendChild(deferredElement);
+
+      }, 100);
+
+    </script>
+
+    <h4>No one really knows, but there are some clues. One address the attacker used is 0xF35e2cC8E6523d683eD44870f5B7cC785051a77D. Got that? Like everything else in a blockchain, a user’s address is an anonymous string of characters. But every address leaves behind a history on the blockchain that’s open for examination. Not that it makes sense to 99.9 percent of humankind, but Green gets it.</h4>
+
+  </body>
+</html>
